@@ -21,6 +21,11 @@
         <property name="mapperInterface" value="com.code.mapper.UserMapper"/>
     </bean>
 
+    <bean id="itemMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <property name="mapperInterface" value="com.code.mapper.ItemMapper"/>
+    </bean>
+
     <!-- 扫描mapper接口 -->
     <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         &lt;!&ndash; mapper接口所在的包 &ndash;&gt;
