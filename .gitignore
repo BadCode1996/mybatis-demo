@@ -1,0 +1,7 @@
+# Project exclude paths
+/demo00/target/
+/demo000/target/
+/demo01/target/
+/demo02/target/
+/demo-mybatis/target/
+/demo-spring-mybatis/target/
