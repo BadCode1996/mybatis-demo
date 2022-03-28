@@ -1,6 +1,8 @@
 package com.test.mapper;
 
+import com.code.bean.Item;
 import com.code.bean.User;
+import com.code.mapper.ItemMapper;
 import com.code.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,9 +21,18 @@ public class ClientTest {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private ItemMapper itemMapper;
+
     @Test
     public void test1(){
         User user = userMapper.queryById(1);
         System.out.println("user = " + user);
+    }
+
+    @Test
+    public void test2(){
+        Item item = itemMapper.queryItemById(1);
+        System.out.println("item = " + item);
     }
 }

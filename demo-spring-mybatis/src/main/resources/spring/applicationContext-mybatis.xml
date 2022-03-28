@@ -13,10 +13,10 @@
         <!-- 注入映射文件路径 **匹配多级路径-->
         <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
         <!--扫描别名-->
-        <!--<property name="typeAliasesPackage" value="com.code.bean"/>-->
+        <property name="typeAliasesPackage" value="com.code.bean"/>
     </bean>
 
-    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+    <!--<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
         <property name="mapperInterface" value="com.code.mapper.UserMapper"/>
     </bean>
@@ -24,12 +24,12 @@
     <bean id="itemMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
         <property name="mapperInterface" value="com.code.mapper.ItemMapper"/>
-    </bean>
+    </bean>-->
 
     <!-- 扫描mapper接口 -->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        &lt;!&ndash; mapper接口所在的包 &ndash;&gt;
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- mapper接口所在的包 -->
         <property name="basePackage" value="com.code.mapper" />
-    </bean>-->
+    </bean>
 
 </beans>
